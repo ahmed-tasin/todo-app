@@ -6,10 +6,17 @@
     <title>ToDo App</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
+<body class="bg-[#80ed99] flex items-center justify-center min-h-screen">
     
-
-
+    <div class="bg-[#e5383b] p-8 rounded-lg shadow-lg w-full max-w-lg">
+        <h1 class="text-center text-2xl font-bold text-black mb-6">ToDo List</h1>
+        <form id="todoForm" class="flex gap-2 mb-6>
+            <input type="text" id="todoInput" placeholder="Add your new ToDo..."
+                class="flex-grow rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-purple-400" />
+            <button type="submit" class="bg-[#001233] text-white px-4 rounded transition">+</button>
+        </form>
+        <ul id="todoList" class="space-y-3"></ul>
+    </div>
 
 
 
