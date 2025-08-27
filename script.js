@@ -55,3 +55,25 @@ function addTodo(text) {
     list.appendChild(li);
 
 }
+
+
+
+
+function editTodo(span) {
+    const oldText = span.textContent;
+    const input = document.createElement("input");
+    input.type = "text";
+    input.value = oldText;
+    input.className =
+    "flex-grow border rounded px-2 py-1 focus:outline-none focus:ring-2 focus:ring-yellow-400";
+
+    span.replaceWith(input);
+    input.focus();
+
+    input.addEventListener("blur", () => {
+    span.textContent = input.value.trim() || oldText;
+    input.replaceWith(span);
+    });
+
+
+}
