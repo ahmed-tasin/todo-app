@@ -41,6 +41,12 @@ function addTodo(text) {
 
 
 
+    const delBtn = document.createElement("button");
+    delBtn.innerHTML = "🗑️";
+    delBtn.className = "bg-blue-600 text-white px-3 py-1 rounded hover:bg-blue-700";
+    delBtn.onclick = () => li.remove();
+
+
 
 
 
