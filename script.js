@@ -47,8 +47,11 @@ function addTodo(text) {
     delBtn.onclick = () => li.remove();
 
 
+    const btnGroup = document.createElement("div");
+    btnGroup.className = "flex gap-2";
+    btnGroup.append(doneBtn, editBtn, delBtn);
 
-
-
+    li.append(span, btnGroup);
+    list.appendChild(li);
 
 }
