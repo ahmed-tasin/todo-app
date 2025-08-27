@@ -75,5 +75,10 @@ function editTodo(span) {
     input.replaceWith(span);
     });
 
-
+    input.addEventListener("keypress", (e) => {
+    if (e.key === "Enter") {
+        span.textContent = input.value.trim() || oldText;
+        input.replaceWith(span);
+    }
+    });
 }
