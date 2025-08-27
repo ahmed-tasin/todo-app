@@ -33,8 +33,16 @@ function addTodo(text) {
 
 
 
+    const editBtn = document.createElement("button");
+    editBtn.innerHTML = "✏️";
+    editBtn.className =
+    "bg-green-400 text-black px-3 py-1 rounded hover:bg-green-500 mr-2";
+    editBtn.onclick = () => editTodo(span);
 
 
 
 
 
+
+
+}
